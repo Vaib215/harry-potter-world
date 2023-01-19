@@ -15,8 +15,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/characters",
-        element: <Characters />,
-        // loader: quotes
+        element: <Characters uri={"characters"}/>,
+      },
+      {
+        path: "/students",
+        element: <Characters uri={"characters/students"}/>,
+      },
+      {
+        path: "/teachers",
+        element: <Characters uri={"characters/staff"}/>,
+      },
+      {
+        path: "/spells",
+        element: <Characters uri={"spells"}/>,
       },
     ]
   },
