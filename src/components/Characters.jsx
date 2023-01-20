@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import Character from './Character'
+import Spell from './Spell'
 
 const Characters = ({ uri }) => {
     const [characters, setCharacters] = useState([])
@@ -15,11 +16,7 @@ const Characters = ({ uri }) => {
         <>
             {(uri === "spells") ? (characters && characters.map(spell => {
                 return (
-                    <>
-                        <span>{spell.name}</span>
-                        <span>{spell.description}</span>
-                        <br />
-                    </>
+                    <Spell spell={spell} key={spell.id}/>
                 )
             }))
                 : (

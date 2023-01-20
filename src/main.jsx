@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import './index.css'
 import Characters from './components/Characters';
+import Person from './components/Person';
+import loadData from './helpers/loadData';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,11 @@ const router = createBrowserRouter([
         path: "/spells",
         element: <Characters uri={"spells"}/>,
       },
+      {
+        path: "/character/:id",
+        element: <Person />,
+        loader: loadData
+      }
     ]
   },
 ]);

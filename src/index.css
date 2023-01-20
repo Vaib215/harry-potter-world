@@ -31,6 +31,11 @@ h1{
 
 #root{
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
 }
 
 .character{
@@ -71,4 +76,34 @@ section{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap:2em;
+}
+
+.spell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.25em auto;
+    padding: 2em;
+    max-width: 600px;
+    text-align: center;
+    border: 32px solid transparent;
+    border-image: url('https://i.imgur.com/Mx28mAq.png') 250 round;
+    color: #e5d475;
+    font-family: 'Satisfy', cursive;
+}
+
+.spell p{
+    font-size: 4em;
+    font-family: 'Harry P';
+    letter-spacing: 0.2ch;
+    color: #e5d475;
+    margin-bottom: 0em;
+}
+
+.spell small {
+    font-size: 1.5em;
+}
+
+#spell a{
+    color: #e5d475;
 }
