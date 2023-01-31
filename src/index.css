@@ -5,16 +5,22 @@ body{
     min-height: 100vh;
 }
 
+.App {
+    width: 100%;
+}
+
 nav {
     justify-content: center;
 }
 
 nav ul{
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     max-width: 512px;
     font-size: 36px;
     padding: 0;
+    gap: 0.5em;
     margin-top: -1em;
 }
 
@@ -50,6 +56,7 @@ h1{
     overflow: hidden;
     box-shadow: 2px 2px 4px var(--primary);
     transition: 300ms;
+    width: 100%;
 }
 
 .character:hover{
@@ -57,7 +64,7 @@ h1{
 }
 
 .character img{
-    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -67,6 +74,18 @@ h1{
     width: 100%;
 }
 
+.character.special {
+    padding: 1em 0;
+}
+
+.character.special b{
+    margin-top: 0;
+}
+
+.character.special p{
+    margin-bottom: 0;
+}
+
 .character small{
     background: #00000070;
     width: 100%;
@@ -74,7 +93,8 @@ h1{
 
 section{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    place-items: center;
     gap:2em;
 }
 
@@ -106,4 +126,33 @@ section{
 
 #spell a{
     color: #e5d475;
+}
+
+.person {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    height: auto;
+    font-size: 1.5em;
+}
+
+.person img{
+    width: 24em;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.person .info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    column-gap: 2em;
+    row-gap: 1em;
+    padding: 1em;
+    width: 50%;
+    font-family: 'Satisfy', cursive;
 }
